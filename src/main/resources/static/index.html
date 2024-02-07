@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="https://unpkg.com/htmx.org"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .background{
+            width: 70vw;
+            height: 100vh;
+            /*元素剧中布局*/
+            margin: 0 auto;
+            background-color: #f5f5f5;
+
+        }
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            justify-content: flex-start;
+        }
+
+        .card {
+            flex: 0 0 200px; /* 默认三列布局，减去的20px是为了考虑间隙 */
+            height: auto;
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+            margin: 10px;
+            padding: 10px;
+        }
+
+        /* 小屏幕（移动设备）适配 */
+        @media (max-width: 768px) {
+            .card {
+                flex: 1 0 calc(50% - 20px); /* 小屏幕上二列布局 */
+                height: auto; /* 可以让高度根据内容自动调整 */
+            }
+        }
+
+        /* 更小屏幕适配 */
+        @media (max-width: 480px) {
+            .card {
+                flex: 1 0 calc(100% - 20px); /* 最小屏幕上一列布局 */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="container">
+            <div class="page-header">
+                <h1>OhMyGPT Help Page</h1>
+            </div>
+            <div class="cards-container">
+                <div class="card">卡片 1</div>
+                <div class="card">卡片 2</div>
+                <div class="card">卡片 3</div>
+                <div class="card">卡片 4</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

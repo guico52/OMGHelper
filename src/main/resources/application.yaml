@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://guico.icu:3306/omg_helper
+    username: remoteuser
+    password: 411326li
