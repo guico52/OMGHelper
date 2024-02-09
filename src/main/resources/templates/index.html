@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
@@ -140,10 +140,9 @@
         <div class="cards-container" th:each="card: ${cards}">
             <div class="card">
                 <div class="question">
-                    <strong th:text="">${card.question}</strong>
+                    <strong th:text="${card.question}"></strong>
                 </div>
-                <hr/>
-                <div class="answer" th:text="">${card.answer}</div>
+                <div class="answer" th:text="${card.answer}"/>
             </div>
         </div>
     </div>
