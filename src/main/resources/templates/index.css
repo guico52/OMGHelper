@@ -91,8 +91,13 @@
 .answer {
     max-height: 0; /* 默认情况下，.answer不可见 */
     overflow: hidden; /* 隐藏超出的内容 */
-
+    text-align: left;
 }
+.answer a{
+    color: #e0e0e0;
+    transition: color 0.5s;
+}
+
 .answer, .card{
     transition: max-height 2s ease-in-out, height 2s ease-in-out;/* 高度变化时，使用0.5s的动画效果 */
 }
